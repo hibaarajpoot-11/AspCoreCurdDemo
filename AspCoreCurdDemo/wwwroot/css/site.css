@@ -1,0 +1,126 @@
+
+/* General Page */
+body {
+    background-color: #f5f6fc;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    padding: 15px 25px;
+}
+
+.navbar-brand {
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    font-weight: 600;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+
+    .nav-link:hover {
+        color: #ffe082 !important;
+        transform: translateY(-2px);
+    }
+
+/* Welcome Section */
+.container > .text-center {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Dashboard Cards */
+.card {
+    border: none;
+    border-radius: 18px;
+    transition: 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .card h4 {
+        font-weight: 700;
+        color: #343a40;
+    }
+
+    .card p {
+        color: #666;
+    }
+
+/* Section Headings */
+h3 {
+    color: #343a40;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+    .btn:hover {
+        transform: translateY(-2px);
+    }
+
+/* Recent Students Table */
+.table {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+    .table thead th {
+        padding: 15px;
+        background-color: #667eea;
+        color: white;
+    }
+
+    .table tbody td {
+        padding: 13px;
+    }
+
+.table-hover tbody tr:hover {
+    background-color: #eeeaff;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    font-size: 14px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 12px;
+    }
+
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .display-4 {
+        font-size: 28px;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .btn-lg {
+        margin-bottom: 10px;
+    }
+
+    .table {
+        font-size: 13px;
+    }
+}

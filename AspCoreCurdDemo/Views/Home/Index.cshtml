@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Welcome Section -->
+<div class="container mt-5">
+
+    <div class="text-center p-5 rounded-4 text-white"
+         style="background: linear-gradient(135deg, #667eea, #764ba2);">
+
+        <h1 class="display-4 fw-bold">
+            Welcome to Student Management System!
+        </h1>
+
+        <p class="lead mt-3">
+            Manage your students, courses and records easily.
+        </p>
+
+        <a asp-controller="Students"
+           asp-action="Index"
+           class="btn btn-light btn-lg mt-3">
+            View Students
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- Dashboard Cards -->
+<div class="container mt-5">
+
+    <div class="row">
+
+        <!-- Students Card -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-4 border-0" style="background-color: #e0f2fe;">
+                <h4>👩‍🎓 Students</h4>
+                <h2 class="display-5 fw-bold text-primary">02</h2>
+                <p>Total Students</p>
+            </div>
+        </div>
+
+        <!-- Courses Card -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-4 border-0" style="background-color: #fce7f3;">
+                <h4>📚 Courses</h4>
+                <h2 class="display-5 fw-bold text-success">01</h2>
+                <p>Available Courses</p>
+            </div>
+        </div>
+
+        <!-- Enrollment Card -->
+        <div class="col-md-4 mb-3">
+            <div class="card shadow p-4 border-0" style="background-color: #dcfce7;">
+                <h4>📝 Enrollment</h4>
+                <h2 class="display-5 fw-bold text-primary">
+                    @ViewBag.TotalStudents
+                </h2>
+                <p>Total Records</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- Quick Actions -->
+<div class="container mt-5 mb-5">
+
+    <h3 class="fw-bold mb-3">Quick Actions</h3>
+
+    <a asp-controller="Students"
+       asp-action="Create"
+       class="btn btn-primary btn-lg me-2">
+        + Add New Student
+    </a>
+
+    <a asp-controller="Students"
+       asp-action="Index"
+       class="btn btn-success btn-lg">
+        View All Students
+    </a>
+
+</div>
+
+<!-- Recent Students -->
+<div class="container mt-5 mb-5">
+
+    <h3 class="fw-bold mb-3">Recent Students</h3>
+
+    <table class="table table-hover table-bordered shadow-sm">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var student in ViewBag.RecentStudents)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.Name</td>
+                    <td>@student.Email</td>
+                    <td>@student.Course</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+
+</div>
